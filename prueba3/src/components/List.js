@@ -7,8 +7,7 @@ const List = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Realiza una solicitud a tu API para obtener la lista de productos
-    axios.get('http://10.0.2.2:8000/api/products') // Ajusta la URL según tu configuración
+    axios.get('http://10.0.2.2:8000/api/products') 
       .then((response) => setProducts(response.data))
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
